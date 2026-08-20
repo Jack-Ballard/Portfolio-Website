@@ -293,20 +293,37 @@
             color: rgba(255,255,255,0.9);
             line-height: 1.6;
         }
-        .contact-links a {
-            display: inline-flex;
-            align-items: center;
+        .contact-links {
+            display: flex;
+            flex-direction: column;
             gap: 8px;
-            color: #fff;
-            text-decoration: none;
-            padding: 8px 12px;
-            border: 1px solid rgba(255,255,255,0.06);
-            border-radius: 6px;
-            margin-right: 8px;
-            background: rgba(255,255,255,0.02);
+            align-items: flex-start;
         }
-        .contact-links a svg { width: 18px; height: 18px; fill: currentColor; }
 
+            .contact-links a {
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+                color: #fff;
+                text-decoration: none;
+                padding: 8px 12px;
+                border: 1px solid rgba(255,255,255,0.06);
+                border-radius: 6px;
+                background: rgba(255,255,255,0.02);
+                margin-right: 0;
+            }
+
+                .contact-links a:hover,
+                .contact-links a:focus {
+                    background: rgba(255,255,255,0.05);
+                    border-color: rgba(255,255,255,0.12);
+                }
+
+                .contact-links a svg {
+                    width: 18px;
+                    height: 18px;
+                    fill: currentColor;
+                }
         .contact-form {
             display: grid;
             gap: 10px;
@@ -338,6 +355,27 @@
             width: fit-content;
         }
 
+        /* CV download button for contact-right */
+        .contact-download {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #fff;
+            background: rgba(255,255,255,0.02);
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-weight: 500;
+            text-decoration: none;
+            border: 1px solid rgba(255,255,255,0.06);
+            transition: background 0.2s ease, border-color 0.2s ease;
+        }
+
+            .contact-download:hover,
+            .contact-download:focus {
+                background: rgba(255,255,255,0.05);
+                border-color: rgba(255,255,255,0.12);
+                outline: none;
+            }
         /* Features section: larger area with optional title/intro */
         .features-section {
             background-color: #f4f4f4;
@@ -590,7 +628,7 @@
         </div>
 
         <div class="image">
-            <img src="graduates.png" alt="Placeholder Image">
+            <img src="assets/images/graduates.png" alt="Placeholder Image">
         </div>
     </div>
 
@@ -702,7 +740,7 @@
                     <p>Description of the Collage Game: concept, visual style, and where to play or download if available.</p>
 
                     <a class="feature-btn" href="collage-game.html" aria-label="Open Collage Game">
-                        <img src="MetalHexagonMess.png" alt="Collage preview">
+                        <img src="assets/images/MetalHexagonMess.png" alt="Collage preview">
                         <span class="btn-label">Open Collage Game</span>
                     </a>
                 </article>
@@ -715,7 +753,7 @@
         <div class="contact-inner">
             <div class="contact-left">
                 <h3 id="contact-title">Contact Me</h3>
-                <p>I'm available for freelance, collaboration and full-time opportunities. Drop me a message or use the form to get in touch. Typical response within 48 hours.</p>
+                <p>Have a question, want to collaborate, or just want to say hello? Feel free to get in touch.</p>
 
                 <div class="contact-links" aria-hidden="false">
                     <a href="mailto:jacksballard@gmail.com" title="Email">
@@ -736,15 +774,16 @@
             </div>
 
             <div class="contact-right">
-                <h3>Send a message</h3>
+                <h3>Hire Me</h3>
+                <p style="margin:8px 0 12px 0; color:rgba(255,255,255,0.9);">
+                    I'm open to full-time opportunities, freelance work and interesting projects. Take a look at my CV to learn more about my experience.
+                </p>
 
-                <!-- Basic mailto form: opens user mail client with form body. Replace action if you have a server endpoint. -->
-                <form class="contact-form" action="mailto:jacksballard@gmail.com" method="post" enctype="text/plain" aria-label="Contact form">
-                    <input type="text" name="name" placeholder="Your name" required>
-                    <input type="email" name="email" placeholder="Your email" required>
-                    <textarea name="message" rows="5" placeholder="Your message" required></textarea>
-                    <button type="submit">Send message</button>
-                </form>
+                <!-- CV download button: ensure the file is placed at assets/downloads/Jack-Ballard-CV.pdf -->
+                <a class="contact-download" href="assets/pdfs/Jack_Ballard_CV.pdf" download title="Download CV" aria-label="Download CV">
+                    Download CV
+                </a>
+
             </div>
         </div>
     </section>
