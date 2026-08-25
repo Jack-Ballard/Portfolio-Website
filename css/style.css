@@ -155,7 +155,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 450px;
+    gap: 350px;
 }
 
 .nav-left,
@@ -457,7 +457,134 @@ header {
 }
 
 /* =========================================================================
-   11. Contact Section
+   11. Split Content Section (Media & Text)
+   ========================================================================= */
+
+.split-section {
+    background-color: #ffffff; /* Or #f4f4f4 if you want to match other sections */
+    padding: 64px 20px;
+}
+
+.split-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: grid;
+    /* Two equal columns. Change to '1.5fr 1fr' if you want the media larger than the text */
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: start; /* Aligns both columns to the top */
+}
+
+/* The side containing the text */
+.split-content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px; /* Spacing between title, paragraphs, buttons, etc. */
+    margin-top: var(--split-margin-top, 60px);
+}
+
+    .split-content h2 {
+        margin: 0 0 8px 0;
+        font-size: 2rem;
+        color: #222;
+        line-height: 1.1;
+    }
+
+    .split-content p {
+        margin: 0;
+        color: #444;
+    }
+
+/* The side containing the image or video */
+.split-media {
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08); /* Optional drop shadow */
+}
+
+    .split-media img,
+    .split-media video {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: cover;
+    }
+
+/* Responsive stacking for smaller screens */
+@media (max-width: 900px) {
+    .split-inner {
+        grid-template-columns: 1fr; /* Stack into a single column */
+        gap: 32px;
+    }
+
+    /* Optional: Swap the order so media is always on top on mobile */
+    .split-media {
+        order: -1;
+    }
+}
+
+/* =========================================================================
+   12. Image Gallery Section
+   ========================================================================= */
+.gallery-section {
+    background-color: #f4f4f4;
+    padding: 64px 20px;
+}
+
+.gallery-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.gallery-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+    .gallery-header h2 {
+        margin: 0 0 8px 0;
+        font-size: 2rem;
+        color: #222;
+    }
+
+/* 
+   Auto-fit Grid: Stretches images to fill rows. 
+   minmax(300px, 1fr) ensures images are at least 300px wide.
+*/
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 16px;
+    padding: 0;
+}
+
+.gallery-item {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    /* Set a consistent aspect ratio (e.g., 16:9) */
+    aspect-ratio: 16 / 9;
+    background-color: #ddd; /* Placeholder background */
+}
+
+    .gallery-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Forces the image to fill the squarish area without stretching */
+        display: block;
+        transition: transform 0.3s ease;
+    }
+
+    /* Add a slight zoom effect on hover for interactivity */
+    .gallery-item:hover img,
+    .gallery-item:focus img {
+        transform: scale(1.05);
+    }
+
+/* =========================================================================
+   13. Contact Section
    ========================================================================= */
 
 .contact-section {
@@ -587,7 +714,7 @@ header {
 }
 
 /* =========================================================================
-   12. Media Queries (Ordered Descending)
+   14. Media Queries (Ordered Descending)
    ========================================================================= */
 
 @media (max-width: 1100px) {
