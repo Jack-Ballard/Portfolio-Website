@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game Jams | Jack Ballard's Website</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <title>Games Architecture | Jack Ballard's Website</title>
+    <link rel="stylesheet" href="../../css/style.css">
 </head>
 <body>
 
@@ -13,7 +13,7 @@
 
             <div class="nav-left">
                 <!-- icon-only button (accessible label provided) -->
-                <a class="btn btn-icon" href="../index.html" title="Home" aria-label="Home">
+                <a class="btn btn-icon" href="../../index.html" title="Home" aria-label="Home">
                     <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                         <path d="M12 3l9 8h-3v8h-12v-8h-3z" />
                     </svg>
@@ -21,9 +21,9 @@
 
 
                 <!-- text-only button (no icon, border invisible until hover) -->
-                <a class="btn btn-text" href="university.html" title="University">University</a>
-                <a class="btn btn-text" href="game-jams.html" title="Game-Jams">Game Jams</a>
-                <a class="btn btn-text" href="personal-projects.html" title="Personal-Projects">Personal Projects</a>
+                <a class="btn btn-text" href="../university.html" title="University">University</a>
+                <a class="btn btn-text" href="../game-jams.html" title="Game-Jams">Game Jams</a>
+                <a class="btn btn-text" href="../personal-projects.html" title="Personal-Projects">Personal Projects</a>
             </div>
 
             <div class="nav-spacer" aria-hidden="true"></div>
@@ -51,42 +51,62 @@
         </div>
     </header>
 
-    <!-- Hero with giant central title -->
-    <section class="hero" aria-labelledby="site-title">
-        <div class="hero-inner">
-            <h1 id="site-title">Jack Ballard</h1>
-            <p>Portfolio</p>
+    <!--- Split content section-->
+    <section class="split-section">
+        <div class="split-inner">
+
+            <!-- Text Output (Right Side by default) -->
+            <div class="split-content">
+                <h2>Games Architecture</h2>
+                <p>This is where your text can flow vertically down the page. As you add more paragraphs, it will just keep extending downwards.</p>
+                <p>Because we're using Flexbox inside the content area, paragraphs space themselves out automatically.</p>
+
+                <!-- You can also easily add your existing buttons here -->
+                <div>
+                    <a href="#" class="btn">View on GitHub</a>
+                </div>
+            </div>
+
+            <!-- Media Output (Left Side by default) -->
+            <div class="split-media">
+                <!-- Use either an image or a video here -->
+                <!--<img src="your-large-image.jpg" alt="Preview Image" />-->
+                <video src="../../assets/videos/GamesArch.mp4" controls autoplay muted loop></video>
+            </div>
+
+
+
+
         </div>
     </section>
 
-    <section class="dynamic-section">
-        <div class="dynamic-inner">
-            <!-- Optional Header perfectly matches your features section -->
-            <div class="features-header">
-                <h2>Dynamic Buttons Gallery</h2>
-                <p>Add as many button items as you want here.</p>
+    <!-- Galery Section -->
+    <section class="gallery-section">
+        <div class="gallery-inner">
+
+            <!-- Optional Title for the Gallery -->
+            <div class="gallery-header">
+                <h2>Screenshots & Progress</h2>
+                <p>Since creating this project</p>
             </div>
 
-            <!-- Dynamic Grid Container -->
-            <div class="dynamic-grid">
+            <div class="gallery-grid">
 
-                <a href="#" class="feature-btn">
-                    <img src="../assets/gifs/fossile.gif" alt="Preview Image" />
-                    <span class="btn-label">Fossile Fuel Flood</span>
-                </a>
+                <div class="gallery-item">
+                    <img src="your-image-1.jpg" alt="Gallery Image 1" />
+                </div>
 
-                <a href="#" class="feature-btn">
-                    <img src="../assets/gifs/subzero.gif" alt="Preview Image" />
-                    <span class="btn-label">Subzero Salvage</span>
-                </a>
+                <div class="gallery-item">
+                    <img src="your-image-2.jpg" alt="Gallery Image 2" />
+                </div>
 
-                <a href="#" class="feature-btn">
-                    <img src="../assets/gifs/bubbles.gif" alt="Preview Image" />
-                    <span class="btn-label">Bubbles</span>
-                </a>
-                <!-- Add 1, 5, or 20 more of these seamlessly -->
+                <div class="gallery-item">
+                    <img src="your-image-3.jpg" alt="Gallery Image 3" />
+                </div>
+
 
             </div>
+
         </div>
     </section>
 
