@@ -169,7 +169,7 @@
                     <p>Game Jams I have partaken in.</p>
 
                     <a class="feature-btn" href="pages/game-jams.html" aria-label="Open Game Jams">
-                        <img src="https://via.placeholder.com/800x450" alt="Game Jams preview">
+                        <img src="assets/gifs/gameJamShowcase.gif" alt="Game Jams preview">
                         <span class="btn-label">Game Jams</span>
                     </a>
                 </article>
@@ -187,6 +187,36 @@
         </div>
     </section>
 
+    <!-- Image Gallery Section (click to focus image) -->
+    <section class="gallery-section" aria-labelledby="gallery-title">
+        <div class="gallery-inner">
+            <div class="gallery-header">
+                <h2 id="gallery-title">Gallery</h2>
+                <p style="margin:8px 0 0; color:#475569;">
+                    Click any image to view it in focus. Press Esc or click the background to close.
+                </p>
+            </div>
+
+            <div class="gallery-grid" role="list">
+                <div class="gallery-item" role="listitem">
+                    <img src="https://via.placeholder.com/1200x675?text=Image+1" alt="Image 1" data-full="https://via.placeholder.com/1600x900?text=Image+1">
+                </div>
+
+                <div class="gallery-item" role="listitem">
+                    <img src="https://via.placeholder.com/1200x675?text=Image+2" alt="Image 2" data-full="https://via.placeholder.com/1600x900?text=Image+2">
+                </div>
+
+                <div class="gallery-item" role="listitem">
+                    <img src="https://via.placeholder.com/1200x675?text=Image+3" alt="Image 3" data-full="https://via.placeholder.com/1600x900?text=Image+3">
+                </div>
+
+                <div class="gallery-item" role="listitem">
+                    <img src="https://via.placeholder.com/1200x675?text=Image+4" alt="Image 4" data-full="https://via.placeholder.com/1600x900?text=Image+4">
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact section (bottom, matches header colour) -->
     <section class="contact-section" aria-labelledby="contact-title">
         <div class="contact-inner">
@@ -196,7 +226,7 @@
 
                 <div class="contact-links" aria-hidden="false">
                     <a href="mailto:jacksballard@gmail.com" title="Email">
-                        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5v-2l8 5 8-5v2z"/></svg>
                         jacksballard@gmail.com
                     </a>
 
@@ -227,5 +257,6 @@
         </div>
     </section>
 
+    <script src="js/gallery.js" defer></script>
 </body>
 </html>

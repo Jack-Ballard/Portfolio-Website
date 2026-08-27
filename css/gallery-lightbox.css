@@ -1,0 +1,311 @@
+
+/* =========================================
+   Gallery Lightbox
+   ========================================= */
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: grid;
+    place-items: center;
+    padding: clamp(20px, 4vw, 56px);
+    background: radial-gradient( circle at center, rgba(20, 24, 32, 0.58) 0%, rgba(5, 7, 12, 0.88) 65%, rgba(2, 3, 6, 0.96) 100% );
+    backdrop-filter: blur(14px) saturate(115%);
+    -webkit-backdrop-filter: blur(14px) saturate(115%);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 220ms ease, visibility 220ms ease;
+}
+
+    .lightbox[aria-hidden="false"] {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+
+
+/* =========================================
+   Inner container
+   ========================================= */
+
+.lightbox-inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: min(1400px, 100%);
+    height: min(90vh, 900px);
+    /*
+     * Reserve space for the navigation arrows.
+     * This prevents the image from growing underneath them.
+     */
+    padding-left: 70px;
+    padding-right: 70px;
+    box-sizing: border-box;
+    transform: scale(0.96);
+    opacity: 0;
+    transition: transform 280ms cubic-bezier(.2, .8, .2, 1), opacity 220ms ease;
+}
+
+.lightbox[aria-hidden="false"] .lightbox-inner {
+    transform: scale(1);
+    opacity: 1;
+}
+
+
+/* =========================================
+   Main image
+   ========================================= */
+
+.lightbox-inner > img {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 86vh;
+    min-width: 0;
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.55), 0 10px 30px rgba(0, 0, 0, 0.35);
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+
+
+/* =========================================
+   Close button
+   ========================================= */
+
+.lightbox-close {
+    position: absolute;
+    top: -18px;
+    right: -18px;
+    z-index: 3;
+    width: 46px;
+    height: 46px;
+    display: grid;
+    place-items: center;
+    padding: 0;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 50%;
+    color: #fff;
+    background: rgba(20, 24, 32, 0.72);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    font-size: 0;
+    transition: background 160ms ease, border-color 160ms ease, transform 160ms ease;
+}
+
+    .lightbox-close::before,
+    .lightbox-close::after {
+        content: "";
+        position: absolute;
+        width: 19px;
+        height: 2px;
+        border-radius: 999px;
+        background: currentColor;
+    }
+
+    .lightbox-close::before {
+        transform: rotate(45deg);
+    }
+
+    .lightbox-close::after {
+        transform: rotate(-45deg);
+    }
+
+    .lightbox-close:hover {
+        background: rgba(255, 255, 255, 0.16);
+        border-color: rgba(255, 255, 255, 0.28);
+        transform: scale(1.06);
+    }
+
+    .lightbox-close:active {
+        transform: scale(0.96);
+    }
+
+
+/* =========================================
+   Previous / Next
+   ========================================= */
+
+.lightbox-nav {
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+    width: 54px;
+    height: 54px;
+    display: grid;
+    place-items: center;
+    padding: 0;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 50%;
+    color: #fff;
+    background: rgba(20, 24, 32, 0.68);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
+    cursor: pointer;
+    transform: translateY(-50%);
+    transition: background 160ms ease, border-color 160ms ease, transform 160ms ease, box-shadow 160ms ease;
+}
+
+.lightbox-prev {
+    left: -27px;
+}
+
+.lightbox-next {
+    right: -27px;
+}
+
+.lightbox-nav svg {
+    width: 25px;
+    height: 25px;
+    fill: currentColor;
+    transition: transform 160ms ease;
+}
+
+.lightbox-prev:hover {
+    transform: translateY(-50%) translateX(-2px);
+}
+
+.lightbox-next:hover {
+    transform: translateY(-50%) translateX(2px);
+}
+
+.lightbox-nav:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.28);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.38);
+}
+
+.lightbox-nav:active {
+    transform: translateY(-50%) scale(0.94);
+}
+
+/* =========================================
+   Image counter
+   ========================================= */
+
+.lightbox-counter {
+    position: absolute;
+    left: 50%;
+    bottom: -34px;
+    transform: translateX(-50%);
+    padding: 6px 11px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 999px;
+    color: rgba(255, 255, 255, 0.8);
+    background: rgba(15, 18, 25, 0.65);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+    user-select: none;
+    pointer-events: none;
+}
+
+
+/* =========================================
+   Keyboard focus
+   ========================================= */
+
+.lightbox button:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 4px;
+}
+
+
+/* =========================================
+   Gallery image interaction
+   ========================================= */
+
+.gallery-grid .gallery-item img {
+    cursor: zoom-in;
+}
+
+
+/* =========================================
+   Mobile
+   ========================================= */
+
+@media (max-width: 700px) {
+    .lightbox {
+        padding: 18px;
+    }
+
+    .lightbox-inner {
+        width: 100%;
+        height: 100%;
+    }
+
+        .lightbox-inner > img {
+            max-width: 100%;
+            max-height: 82vh;
+            border-radius: 7px;
+        }
+
+    .lightbox-nav {
+        width: 44px;
+        height: 44px;
+        background: rgba(15, 18, 25, 0.78);
+    }
+
+    .lightbox-prev {
+        left: 4px;
+    }
+
+    .lightbox-next {
+        right: 4px;
+    }
+
+    .lightbox-close {
+        top: 4px;
+        right: 4px;
+        width: 42px;
+        height: 42px;
+    }
+
+    .lightbox-counter {
+        bottom: -28px;
+        font-size: 11px;
+        padding: 5px 9px;
+    }
+}
+
+
+/* =========================================
+   Reduced motion
+   ========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+    .lightbox,
+    .lightbox-inner,
+    .lightbox-nav,
+    .lightbox-close,
+    .lightbox-nav svg {
+        transition: none !important;
+    }
+}
+
+/* Responsive tweaks */
+@media (max-width: 900px) {
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+
+    .lightbox img {
+        max-width: 92%;
+        max-height: 88%;
+    }
+}
