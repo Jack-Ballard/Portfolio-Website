@@ -65,8 +65,11 @@
             <!-- Text Output (Right Side by default) -->
             <div class="split-content" style="--split-margin-top: 12px">
                 <h2>Universal Dialogue System</h2>
-                <p>For my honours stage project, I created a node-based dialogue creation tool with inbult Lua scripting. The aim of this software was to be able to create dialogue for games that services any need a developer may have, whilst being game engine agnostic.</p>
-                <p>In practice, this tool places much of the strain of making the dialogue work for games on those games developers. Still, granted that the hooks for the game are the same, the file this tool produces can be dropped into any game regardless of engine so long as it has the interpriter.</p>
+                <p>For my honours stage project, I created a node-based dialogue creation tool with built-in Lua scripting. 
+                The aim of the software was to provide a flexible system for creating game dialogue that could support a wide range of developer requirements while remaining game-engine agnostic.</p>
+                <p>The tool provides multiple types of conditions and attributes that can be connected to hooks in the end application, allowing developers to extend the system to suit their specific needs. 
+                This places the majority of dialogue authoring and branching narrative design away from the developer, and allows a writer who doesn't have technical experiance to meaningfully interact with the game.
+                The resulting dialogue file can then be interpreted by any game engine with a compatible interpreter.</p>
                 <p>I wrote alot about this project, you can read about it here:</p>
 
                 <!-- You can also easily add your existing buttons here -->
@@ -77,10 +80,12 @@
             </div>
 
             <!-- Text Output (Right Side by default) -->
-            <div class="split-content">
-                <h2>The Interprier</h2>
-                <p>I chose Unity to demonstrate the file being used in a game, but honestly porting this over to an engine like Godot, which also uses C#, would be trivial. Only a small amount of files would need to change that allows the interpriter to talk to unity, much of the process is entirely seperated.</p>
-                <p>Because we're using Flexbox inside the content area, paragraphs space themselves out automatically.</p>
+            <div class="split-content" style="--split-margin-top: 12px">
+                <h2>The Interpreter</h2>
+                <p>I also created an interpreter that allows the dialogue files produced by the editor to be used within Unity. 
+                As most of the interpreter is written in C# and is independent of Unity's APIs, it can be relatively easily adapted to other C#-based game engines.</p>
+                <p>The interpreter allows developers to expose their own functions to Lua scripts written within the editor. These functions are also exported as stubs for the editor, 
+                providing an accurate representation of the functions available in the target game and allowing the editor to perform error checking on Lua scripts before they are used in-game.</p>
 
                 <!-- You can also easily add your existing buttons here -->
                 <div>
