@@ -62,9 +62,11 @@
             </div>
 
             <!-- Text Output (Right Side by default) -->
-            <div class="split-content">
+            <div class="split-content" style="--split-margin-top: 12px">
                 <h2>Rust Particle Simulator</h2>
-                <p>This is where your text can flow vertically down the page. As you add more paragraphs, it will just keep extending downwards.</p>
+                <p>The Rust program is a multithreaded CPU particle simulation, with separate thread pools handling particle movement, cooling and collision detection. 
+                Spatial partitioning is used to reduce the number of collision checks, while double buffering allows threads to safely read from the current particle data while writing to the next frame without requiring locks. 
+                Work is divided into chunks between threads to balance the workload and prevent multiple threads from modifying the same particles.</p>
                 <p>Because we're using Flexbox inside the content area, paragraphs space themselves out automatically.</p>
 
                 <!-- You can also easily add your existing buttons here -->
@@ -76,8 +78,13 @@
             <!-- Text Output (Right Side by default) -->
             <div class="split-content">
                 <h2>CUDA Particle Simulator</h2>
-                <p>This is where your text can flow vertically down the page. As you add more paragraphs, it will just keep extending downwards.</p>
-                <p>Because we're using Flexbox inside the content area, paragraphs space themselves out automatically.</p>
+                <p>
+                    The CUDA program uses GPU parallelism to process particles through a series of kernels for movement, spatial partitioning, collision detection, merging, cooling and rendering updates. 
+                    Each particle can be processed independently where possible, allowing the GPU to handle large numbers of particles simultaneously.
+                </p>
+                <p>Like the Rust implementation, it uses spatial partitioning to reduce collision checks, but requires explicit synchronisation between GPU operations. 
+                In contrast to the Rust program, which used a limited pool of CPU threads with the workload distributed between them, 
+                the CUDA program used GPU threads to process individual particles for each parallel operation.</p>
 
                 <!-- You can also easily add your existing buttons here -->
                 <div>

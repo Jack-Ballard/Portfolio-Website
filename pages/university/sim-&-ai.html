@@ -62,11 +62,11 @@
                 <h2>Simulation and AI</h2>
                 <p>
                     This is a top-down bullet-hell game where the player survives waves of spawning enemies using projectiles and teleportation using simulation and AI techniques.
-                    For simulation, the physics uses forces, velocity, and acceleration to control player and projectile movement. Circle and AABB collision detection handles interactions with walls and other projectiles. 
+                    For simulation, the physics uses forces, velocity, and acceleration to control player and projectile movement. Circle and AABB collision detection handles interactions with walls and other projectiles.
                     The grid-based environment also supports A* pathfinding towards the player.
                 </p>
                 <p>
-                    Enemy AI uses a finite state machine with behaviors including pathfinding, maintaining distance and ramming. Steering behaviors such as Seek and collision avoidance control enemy movement, 
+                    Enemy AI uses a finite state machine with behaviors including pathfinding, maintaining distance and ramming. Steering behaviors such as Seek and collision avoidance control enemy movement,
                     while transitions change states based on conditions such as line of sight and health.
                 </p>
 
@@ -89,10 +89,14 @@
 
             <!-- Text Output (Right Side by default) -->
             <div class="split-content">
-                <p>A separate map editor allows developers to create, resize and customize tile maps, which are saved and loaded through serialization. 
-                It supports manual tile drawing, camera movement, and procedural map generation using noise and cellular automata.</p>
-                <p>Cellular automata creates natural-looking wall layouts by evaluating neighboring tiles over multiple iterations. 
-                However, it does not guarantee every area is reachable, so flood fill could be added to remove inaccessible sections and ensure valid maps.</p>
+                <p>
+                    A separate map editor allows developers to create, resize and customize tile maps, which are saved and loaded through serialization.
+                    It supports manual tile drawing, camera movement, and procedural map generation using noise and cellular automata.
+                </p>
+                <p>
+                    Cellular automata creates natural-looking wall layouts by evaluating neighboring tiles over multiple iterations.
+                    However, it does not guarantee every area is reachable, so flood fill could be added to remove inaccessible sections and ensure valid maps.
+                </p>
 
                 <!-- You can also easily add your existing buttons here -->
                 <div>
@@ -117,16 +121,16 @@
             <div class="gallery-grid">
 
                 <div class="gallery-item">
-                    <img src="your-image-1.jpg" alt="Gallery Image 1" />
+                    <img src="../../assets/images/SIM&AI1.png" alt="Gallery Image 1" />
                 </div>
 
                 <div class="gallery-item">
-                    <img src="your-image-2.jpg" alt="Gallery Image 2" />
+                    <img src="../../assets/images/SIM&AI2.png" alt="Gallery Image 2" />
                 </div>
 
-                <div class="gallery-item">
+                <!--<div class="gallery-item">
                     <img src="your-image-3.jpg" alt="Gallery Image 3" />
-                </div>
+                </div>-->
 
 
             </div>
@@ -173,6 +177,7 @@
             </div>
         </div>
     </section>
+    <script src="../../js/gallery.js" defer></script>
 
 </body>
 </html>

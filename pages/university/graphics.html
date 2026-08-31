@@ -63,10 +63,15 @@
             </div>
 
             <!-- Text Output (Right Side by default) -->
-            <div class="split-content">
+            <div class="split-content" style="--split-margin-top: 12px">
                 <h2>Graphics Programing</h2>
-                <p>This is where your text can flow vertically down the page. As you add more paragraphs, it will just keep extending downwards.</p>
-                <p>Because we're using Flexbox inside the content area, paragraphs space themselves out automatically.</p>
+                <p>
+                    For this module I developed a 3D graphics application using OpenTK, implementing custom Vector and Matrix classes. 
+                    I created a generic Primitive class capable of generating triangles, quads, cubes, cylinders and spheres, and used vectors and matrices to apply translation, rotation and scaling transformations.
+                </p>
+                <p>I also implemented a hierarchical Scene Graph using an inheritance structure and the Visitor pattern to manage transformations and drawing. 
+                There's also delta-time based animation and multiple cameras with different projection views, 
+                including static cameras and a user-controlled camera that could be moved and rotated using input.</p>
 
                 <!-- You can also easily add your existing buttons here -->
                 <div>

@@ -104,15 +104,88 @@
                     <span class="btn-label">Group Unity Project</span>
                 </a>
 
+                <!--<a href="#" class="feature-btn">
+                    <img src="your-image.jpg" alt="Preview Image" />
+                    <span class="btn-label">Artificial intelligence</span>
+                </a>
+
+                <a href="#" class="feature-btn">
+                    <img src="your-image.jpg" alt="Preview Image" />
+                    <span class="btn-label">Advanced Programing</span>
+                </a>-->
                 <!-- Add 1, 5, or 20 more of these seamlessly -->
 
             </div>
         </div>
     </section>
 
+
+
     <!--- Split content section-->
     <section class="split-section">
         <div class="split-inner">
+
+            <div class="gallery-grid">
+
+                <div class="gallery-item">
+                    <img src="../assets/images/Dist1.png" alt="Gallery Image 1" />
+                </div>
+
+                <div class="gallery-item">
+                    <img src="../assets/images/Dist2.png" alt="Gallery Image 2" />
+                </div>
+
+                <div class="gallery-item">
+                    <img src="../assets/images/Dist3.png" alt="Gallery Image 3" />
+                </div>
+
+                <div class="gallery-item">
+                    <img src="../assets/images/Dist4.png" alt="Gallery Image 4" />
+                </div>
+
+
+
+            </div>
+            
+
+            <!-- Text Output (Right Side by default) -->
+            <div class="split-content" style="--split-margin-top: 12px">
+                <h2>Distributed Systems</h2>
+                <p>
+                    I developed a RESTful client-server API using HTTP requests, with controllers handling different routes and standard methods such as GET, POST and DELETE.
+                    The server uses API keys for authentication and middleware to handle both authentication and role-based authorisation.
+                </p>
+                <p>
+                    Entity Framework was used to manage the SQL database and provide CRUD operations for users and logs, with database access separated into its own class to maintain loose coupling.
+                    I also implemented encrypted communication between the client and server using RSA and AES encryption. The RSA private key was securely stored through the machine's certificate store rather than directly in application memory.
+                </p>
+
+                <!-- You can also easily add your existing buttons here -->
+                <!--<div>
+            <a href="#" class="btn">View on GitHub</a>
+        </div>-->
+            </div>
+
+
+
+            <!-- Text Output (Right Side by default) -->
+            <div class="split-content">
+                <h2>Advanced Programing</h2>
+                <p>This is where your text can flow vertically down the page. As you add more paragraphs, it will just keep extending downwards.</p>
+                <p>Because we're using Flexbox inside the content area, paragraphs space themselves out automatically.</p>
+
+                <!-- You can also easily add your existing buttons here -->
+                <!--<div>
+            <a href="#" class="btn">View on GitHub</a>
+        </div>-->
+            </div>
+
+            <!-- Media Output (Left Side by default) -->
+            <div class="split-media">
+                <!-- Use either an image or a video here -->
+                <img src="your-large-image.jpg" alt="Preview Image" />
+                <!--<video src="../assets/images/GraduatedEdited.jpg" controls autoplay muted loop></video>-->
+            </div>
 
             <!-- Media Output (Left Side by default) -->
             <div class="split-media">
@@ -123,14 +196,14 @@
 
             <!-- Text Output (Right Side by default) -->
             <div class="split-content">
-                <h2>University of Hull</h2>
+                <h2>Artificial intelligence</h2>
                 <p>This is where your text can flow vertically down the page. As you add more paragraphs, it will just keep extending downwards.</p>
                 <p>Because we're using Flexbox inside the content area, paragraphs space themselves out automatically.</p>
 
                 <!-- You can also easily add your existing buttons here -->
                 <!--<div>
-                    <a href="#" class="btn">View on GitHub</a>
-                </div>-->
+            <a href="#" class="btn">View on GitHub</a>
+        </div>-->
             </div>
 
 
@@ -206,6 +279,7 @@
             </div>
         </div>
     </section>
+    <script src="../js/gallery.js" defer></script>
 
 </body>
 </html>

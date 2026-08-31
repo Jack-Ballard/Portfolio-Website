@@ -56,10 +56,17 @@
         <div class="split-inner">
 
             <!-- Text Output (Right Side by default) -->
-            <div class="split-content">
+            <div class="split-content" style="--split-margin-top: 12px">
                 <h2>Games Architecture</h2>
-                <p>This module had us creating a game engine using the entity component system architecture. </p>
-                <p>Because we're using Flexbox inside the content area, paragraphs space themselves out automatically.</p>
+                <p>
+                    This module had us creating a game engine using the entity component system architecture. The game includes multiple scenes for menus, gameplay, high scores and game states,
+                    alongside a camera system, HUD, audio, lighting and collision detection. The engine is separated from the game-specific code and is designed to be reusable and modular.
+                </p>
+                <p>
+                    Entities are composed of independent components containing data, while systems process the logic associated with those components, such that a velocity compontnet would store that entities velocity vector,
+                    and a velocity system would move the entity by that value. Managers provide additional functionality such as scene management, input, collision handling and high-score networking.
+                </p>
+
 
                 <!-- You can also easily add your existing buttons here -->
                 <div>
@@ -73,9 +80,6 @@
                 <!--<img src="your-large-image.jpg" alt="Preview Image" />-->
                 <video src="../../assets/videos/GamesArch.mp4" controls autoplay muted loop></video>
             </div>
-
-
-
 
         </div>
     </section>
@@ -106,6 +110,30 @@
 
 
             </div>
+
+        </div>
+    </section>
+
+    <!--- Split content section-->
+    <section class="split-section">
+
+        <div class="split-inner">
+
+            <!-- Text Output (Right Side by default) -->
+            <div class="split-content" style="--split-margin-top: 0px;">
+                <h2>Further Work</h2>
+                <p>
+                    I also implemented a client/server high-score system. The game client communicates with a separate high-score server to retrieve and submit scores,
+                    with the server storing the data in a file.
+                </p>
+                <p> I coverd this subject more extensively in my distributed systems module.</p>
+
+            </div>
+
+            <a class="feature-btn" href="pages/university.html" aria-label="Open Platformer project">
+                <img src="https://via.placeholder.com/800x450" alt="Platformer preview">
+                <span class="btn-label">Distributed Systems</span>
+            </a>
 
         </div>
     </section>
