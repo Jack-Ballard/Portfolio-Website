@@ -874,3 +874,24 @@ header {
         height: 160px;
     }
 }
+
+/* =========================================================================
+   15. Game Jams Section Exceptions
+   ========================================================================= 
+    This section is bad, but it is necessary to override the default background and text colors for the Game Jams section.
+    Don't do this, this is bad, but it will work for now. -J
+*/
+
+
+/* Game Jams section — pure white background and adjusted text color */
+#game-jams {
+    background-color: #ffffff;
+}
+
+#game-jams .features-header h2 {
+    color: #111; /* ensure strong contrast on white */
+}
+
+#game-jams .features-header p {
+    color: #475569; /* keep the descriptive paragraph colour */
+}
