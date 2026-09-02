@@ -52,98 +52,58 @@
     </header>
 
 
-    <!-- Expanded features section with a title/intro and larger area -->
-    <section class="features-section" aria-labelledby="features-title">
-        <div class="features-inner">
-            <div class="features-header">
-                <h2 id="features-title">My Blender Work</h2>
-                <p>I've been learning blender for a couple of years at this point, and here are some of the things I'v egotten around to rendering. 
-                    I quite enjoy making things in blender, and I'm trying to get better at it.<p>
+    <!--- Split content section-->
+    <section class="split-section">
+        <div class="split-inner">
+
+            <!-- Media Output (Left Side by default) -->
+            <div class="split-media">
+                <!-- Use either an image or a video here -->
+                <img src="../../assets/gifs/WebRenderer1.gif" alt="Preview Image" />
+                <!--<video src="../../assets/gifs/WebRenderer1.gif" controls autoplay muted loop></video> -->
             </div>
 
+            <!-- Text Output (Right Side by default) -->
+            <div class="split-content" style="--split-margin-top: 12px">
+                <h2>Web Renderer</h2>
+                <p>
+                    This is my lastest ongoing project, a WebGL renderer built from scratch based on my graphics programming module at university. 
+                    It uses a custom shader pipeline and implements a basic rasterization algorithm to render 3D models in real-time.
+
+                </p>
+                <p>
+                    The plan is to turn this into an ECS system that allows for scenes to be created and saved on the page, and then allow multiple people to connect to the same scene and interact in the same instance.
+                </p>
+
+                <!-- You can also easily add your existing buttons here -->
+                <div>
+                    <a href="https://github.com/Jack-Ballard/Web-Renderer" class="btn">View on GitHub</a>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <!-- Galery Section -->
+    <section class="gallery-section">
+        <div class="gallery-inner">
+
+            <!-- Optional Title for the Gallery -->
+            <div class="gallery-header">
+                <h2>Screenshots & Progress</h2>
+                <p>This project is still ongoing, so this will continue to see updates!</p>
+            </div>
 
             <div class="gallery-grid">
 
                 <div class="gallery-item">
-                    <img src="../../assets/images/Blender6.png" alt="Gallery Image 1" />
+                    <img src="../../assets/gifs/WebRenderer2.gif" alt="Gallery Image 1" />
                 </div>
 
                 <div class="gallery-item">
-                    <img src="../../assets/images/Blender4.png" alt="Gallery Image 2" />
+                    <img src="../../assets/gifs/WebRenderer3.gif" alt="Gallery Image 2" />
                 </div>
-
-                <div class="gallery-item">
-                    <img src="../../assets/images/Blender10.png" alt="Gallery Image 3" />
-                </div>
-
-                <div class="gallery-item">
-                    <img src="../../assets/images/Blender2.png" alt="Gallery Image 4" />
-                </div>
-
-                <div class="gallery-item">
-                    <img src="../../assets/images/Blender11.png" alt="Gallery Image 5" />
-                </div>
-
-                <div class="gallery-item">
-                    <img src="../../assets/images/Blender8.png" alt="Gallery Image 6" />
-                </div>
-
-                <div class="gallery-item">
-                    <img src="../../assets/images/Blender15.png" alt="Gallery Image 7" />
-                </div>
-
-                <div class="gallery-item">
-                    <img src="../../assets/images/Blender5.png" alt="Gallery Image 8" />
-                </div>
-
-                <div class="gallery-item">
-                    <img src="../../assets/images/Blender17.png" alt="Gallery Image 9" />
-                </div>
-
-                <div class="gallery-item">
-                    <img src="../../assets/images/Blender19.png" alt="Gallery Image 10" />
-                </div>
-
-                <div class="gallery-item">
-                    <img src="../../assets/images/Blender18.png" alt="Gallery Image 11" />
-                </div>
-
-                <div class="gallery-item">
-                    <img src="../../assets/images/Blender12.png" alt="Gallery Image 12" />
-                </div>
-
-                <div class="gallery-item">
-                    <img src="../../assets/images/Blender20.png" alt="Gallery Image 13" />
-                </div>
-
-                <div class="gallery-item">
-                    <img src="../../assets/images/Blender16.png" alt="Gallery Image 14" />
-                </div>
-
-                <div class="gallery-item">
-                    <img src="../../assets/images/Blender13.png" alt="Gallery Image 15" />
-                </div>
-
-                <div class="gallery-item">
-                    <img src="../../assets/images/Blender7.png" alt="Gallery Image 16" />
-                </div>
-
-                <div class="gallery-item">
-                    <img src="../../assets/images/Blender3.png" alt="Gallery Image 17" />
-                </div>
-
-                <div class="gallery-item">
-                    <img src="../../assets/images/Blender9.png" alt="Gallery Image 18" />
-                </div>
-
-                <div class="gallery-item">
-                    <img src="../../assets/images/Blender14.png" alt="Gallery Image 19" />
-                </div>
-
-                <div class="gallery-item">
-                    <img src="../../assets/images/Blender1.png" alt="Gallery Image 20" />
-                </div>
-
 
             </div>
 
@@ -172,6 +132,7 @@
                         <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124zM7.114 20.452H3.558V9h3.556v11.452z" /></svg>
                         LinkedIn
                     </a>
+
                 </div>
             </div>
 

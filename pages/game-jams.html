@@ -51,44 +51,122 @@
         </div>
     </header>
 
-    <!-- Hero with giant central title -->
-    <section class="hero" aria-labelledby="site-title">
-        <div class="hero-inner">
-            <h1 id="site-title">Jack Ballard</h1>
-            <p>Portfolio</p>
+    <!--<section class="dynamic-section">
+        <div class="dynamic-inner">-->
+    <!-- Optional Header perfectly matches your features section -->
+    <!--<div class="features-header">
+        <h2>Dynamic Buttons Gallery</h2>
+        <p>Add as many button items as you want here.</p>
+    </div>-->
+    <!-- Dynamic Grid Container -->
+    <!--<div class="dynamic-grid">
+
+        <a href="#" class="feature-btn">
+            <img src="../assets/gifs/fossile.gif" alt="Preview Image" />
+            <span class="btn-label">Fossile Fuel Flood</span>
+        </a>
+
+        <a href="#" class="feature-btn">
+            <img src="../assets/gifs/subzero.gif" alt="Preview Image" />
+            <span class="btn-label">Subzero Salvage</span>
+        </a>
+
+        <a href="#" class="feature-btn">
+            <img src="../assets/gifs/bubbles.gif" alt="Preview Image" />
+            <span class="btn-label">Bubbles</span>
+        </a>-->
+    <!-- Add 1, 5, or 20 more of these seamlessly -->
+    <!--</div>
+        </div>
+    </section>-->
+    <!-- Page title / intro -->
+
+    <section class="features-section" aria-labelledby="game-jams-title" style="padding-top:40px; padding-bottom:28px;">
+        <div class="features-inner">
+            <div class="features-header" role="region" aria-labelledby="game-jams-title">
+                <h2 id="game-jams-title">Game Jams</h2>
+                <p style="margin:8px 0 0; color:#475569; max-width:840px; margin-left:auto; margin-right:auto;">
+                    A collection of short-form projects created for game jams — rapid prototyping, experimentation and teamwork.
+                    Below you'll find a brief summary of each jam entry and accompanying preview media.
+                </p>
+            </div>
         </div>
     </section>
 
-    <section class="dynamic-section">
-        <div class="dynamic-inner">
-            <!-- Optional Header perfectly matches your features section -->
-            <div class="features-header">
-                <h2>Dynamic Buttons Gallery</h2>
-                <p>Add as many button items as you want here.</p>
+    <!--- Split content section-->
+    <section class="split-section">
+        <div class="split-inner">
+
+            <div class="gallery-item">
+                <img src="../assets/gifs/subzero.gif" alt="Gallery Image 3" />
             </div>
 
-            <!-- Dynamic Grid Container -->
-            <div class="dynamic-grid">
 
-                <a href="#" class="feature-btn">
-                    <img src="../assets/gifs/fossile.gif" alt="Preview Image" />
-                    <span class="btn-label">Fossile Fuel Flood</span>
-                </a>
+            <!-- Text Output (Right Side by default) -->
+            <div class="split-content" id="distributed-systems" style="--split-margin-top: 12px">
+                <h2>Sub-Zero Salvage</h2>
+                <p>
+                    I developed a RESTful client-server API using HTTP requests, with controllers handling different routes and standard methods such as GET, POST and DELETE.
+                    The server uses API keys for authentication and middleware to handle both authentication and role-based authorisation.
+                </p>
+                <p>
+                    Entity Framework was used to manage the SQL database and provide CRUD operations for users and logs, with database access separated into its own class to maintain loose coupling.
+                    I also implemented encrypted communication between the client and server using RSA and AES encryption. The RSA private key was securely stored through the machine's certificate store rather than directly in application memory.
+                </p>
 
-                <a href="#" class="feature-btn">
-                    <img src="../assets/gifs/subzero.gif" alt="Preview Image" />
-                    <span class="btn-label">Subzero Salvage</span>
-                </a>
-
-                <a href="#" class="feature-btn">
-                    <img src="../assets/gifs/bubbles.gif" alt="Preview Image" />
-                    <span class="btn-label">Bubbles</span>
-                </a>
-                <!-- Add 1, 5, or 20 more of these seamlessly -->
-
+                <!-- You can also easily add your existing buttons here -->
+                <!--<div>
+                    <a href="#" class="btn">View on GitHub</a>
+                </div>-->
             </div>
+
+
+
+            <!-- Text Output (Right Side by default) -->
+            <div class="split-content" style="--split-margin-top: 12px">
+                <h2>Bubbles!</h2>
+                <p>
+                    For this module I developed my understanding of C++ through a series of programming tasks covering memory management, pointers, object-oriented programming, file handling and data structures.
+                    I used Visual Studio's debugging and disassembly tools to explore how C++ code is translated into assembly and how memory and registers are handled at runtime.
+                </p>
+                <p>
+
+                </p>
+
+                <!-- You can also easily add your existing buttons here -->
+                <!--<div>
+                    <a href="#" class="btn">View on GitHub</a>
+                </div>-->
+            </div>
+
+            <div class="gallery-item">
+                <img src="../assets/gifs/bubbles.gif" alt="Gallery Image 3" />
+            </div>
+
+            <div class="gallery-item">
+                <img src="../assets/gifs/fossile.gif" alt="Gallery Image 3" />
+            </div>
+
+            <!-- Text Output (Right Side by default) -->
+            <div class="split-content" style="--split-margin-top: 12px">
+                <h2>Fossile Fuel Flood</h2>
+                <p>
+                    This was a monogame procedual platformer, and my first game jam. I developed the game in C# using the Monogame framework which we learned over the course of the weekend.
+                </p>
+                <p>
+
+                </p>
+
+                <!-- You can also easily add your existing buttons here -->
+                <!--<div>
+                    <a href="#" class="btn">View on GitHub</a>
+                </div>-->
+            </div>
+
+
         </div>
     </section>
+
 
     <!-- Contact section (bottom, matches header colour) -->
     <section class="contact-section" aria-labelledby="contact-title">
